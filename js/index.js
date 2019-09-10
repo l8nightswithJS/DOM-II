@@ -28,3 +28,9 @@ imgContent.addEventListener('dblclick', (event) => {
 });
 
 
+const headerQuery = document.querySelectorAll('h2');
+headerQuery.forEach((headers) => {
+    headers.addEventListener('mouseover', changeColor);
+})
+
+
