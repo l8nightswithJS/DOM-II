@@ -32,5 +32,17 @@ const headerQuery = document.querySelectorAll('h2');
 headerQuery.forEach((headers) => {
     headers.addEventListener('mouseover', changeColor);
 })
+const containerQuery = document.querySelector('.all');
+
+document.addEventListener('scroll', () => {
+    const scrollSpace = window.scrollY;
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (Math.ceil(scrollSpace) === scrollHeight) {
+        containerQuery.style.display = "none";
+        return alert("Click Ok see me go away!!!")
+    }
+});
+
+
 
 
