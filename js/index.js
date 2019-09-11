@@ -6,6 +6,7 @@ funBusQuery.addEventListener('mouseover', (event) => {
 
 function changeColor(event) {
     event.target.style.color = "orange";
+    event.preventDefault();
 }
 
 const navQuery = document.querySelectorAll('a');
@@ -38,10 +39,13 @@ document.addEventListener('scroll', () => {
     const scrollSpace = window.scrollY;
     const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
     if (Math.ceil(scrollSpace) === scrollHeight) {
-        containerQuery.style.display = "none";
-        return alert("Click Ok see me go away!!!")
+        containerQuery.style.backgroundColor = "red";
+        return alert("Click Ok see me go red!!!")
     }
 });
+
+
+  
 
 
 
