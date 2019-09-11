@@ -1,11 +1,17 @@
 // Your code goes here
+const navContainer = document.querySelector('.nav-container')
+window.addEventListener('load', () => {
+    navContainer.style.backgroundColor = 'lightblue';
+    return alert("Hello friend if you click the Anchors Links they will change color, also double click pictures see what chnages if you like 'red' scroll to bottom")
+})
+
 const funBusQuery = document.querySelector('h1')
 funBusQuery.addEventListener('mouseover', (event) => {
     funBusQuery.style.color = "green";
 }) 
 
 function changeColor(event) {
-    event.target.style.color = "orange";
+    event.target.style.color = "blue";
     event.preventDefault();
 }
 
@@ -43,6 +49,17 @@ document.addEventListener('scroll', () => {
         return alert("Click Ok see me go red!!!")
     }
 });
+
+const smallHeadersQuery = document.querySelectorAll('h4');
+
+smallHeadersQuery.forEach((smallHeaders) => {
+    document.addEventListener('mouseover', () => {
+        smallHeaders.style.color = 'yellow';    
+
+    })
+});
+
+
 
 
   
